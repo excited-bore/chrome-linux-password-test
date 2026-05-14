@@ -2,7 +2,9 @@ Google Chrome on linux password check
 ===========
 
 Small claude generated python script to check whether passwords in google chrome based browsers on linux are properly encrypted or not  
-If not, it will paste every entry in the password manager inside the shell  
+If not, it will paste every entry's password of chrome's password manager inside the shell. Websites and emails will be pasted regardless.  
+This bug is not applicable to Gecko-based (Firefox-based) password manager's but if you're a firefox user you should make sure to set a primary password, otherwise you'd be still as vulnerable ->  
+See: https://github.com/unode/firefox_decrypt  
 
 ## How to use
 
